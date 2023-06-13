@@ -19,9 +19,9 @@ public class EncoderTest {
 
         // 模拟客户端，写入数据
         ByteBuf buffer = ByteBufAllocator.DEFAULT.buffer();
-        send(buffer, "Hello");
+        send(buffer, "Hello1");
         channel.writeInbound(buffer);
-        send(buffer, "World");
+        send(buffer, "World12");
         channel.writeInbound(buffer);
     }
 

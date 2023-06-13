@@ -1,4 +1,4 @@
-package com.yly.netty.linbasedframe;
+package com.yly.netty.linebasedframe;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;

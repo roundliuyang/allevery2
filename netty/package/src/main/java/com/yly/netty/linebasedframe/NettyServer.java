@@ -1,4 +1,4 @@
-package com.yly.netty.linbasedframe;
+package com.yly.netty.linebasedframe;
 
 import com.yly.netty.MyLoggingHandler;
 import io.netty.bootstrap.ServerBootstrap;
