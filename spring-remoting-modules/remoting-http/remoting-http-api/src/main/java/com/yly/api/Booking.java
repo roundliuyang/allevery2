@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import static java.lang.String.format;
 
+/**
+ * todo 此处为什么要实现序列化接口呢
+ */
 public class Booking implements Serializable {
     private String bookingCode;
 

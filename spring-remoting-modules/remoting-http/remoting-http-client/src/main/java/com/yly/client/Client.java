@@ -13,6 +13,9 @@ import static java.lang.System.out;
 @Configuration
 public class Client {
 
+    /**
+     * create an instance of HttpInvokerProxyFactoryBean
+     */
     @Bean
     public HttpInvokerProxyFactoryBean invoker() {
         HttpInvokerProxyFactoryBean invoker = new HttpInvokerProxyFactoryBean();
