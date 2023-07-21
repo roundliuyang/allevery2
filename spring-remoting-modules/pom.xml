@@ -3,20 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>allevery2</artifactId>
         <groupId>com.yly</groupId>
+        <artifactId>parent-boot-2</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../parent-boot-2</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>datasource-pool</artifactId>
+    <artifactId>spring-remoting-modules</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>hikaricp-single</module>
-        <module>hikaricp-multiple</module>
-        <module>druid-single</module>
-        <module>druid-multiple</module>
+        <module>remoting-http</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- companion modules -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
