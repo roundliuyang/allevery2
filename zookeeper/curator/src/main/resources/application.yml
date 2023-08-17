@@ -1,0 +1,5 @@
+server:
+  port: 8000
+
+zookeeper:
+  address: 127.0.0.1:2181
