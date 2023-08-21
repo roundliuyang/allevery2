@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+
+	<schema name="TESTDB" checkSQLschema="false" sqlMaxLimit="100">
+		<table name="user" primaryKey="id" dataNode="dn01,dn02" rule="rule1" />
+	</schema>
+
+	<!-- 设置dataNode 对应的数据库,及 mycat 连接的地址dataHost -->
+	<dataNode name="dn01" dataHost="dh01" database="db01" />
+	<dataNode name="dn02" dataHost="dh02" database="db02" />
+
+	<!-- mycat 逻辑主机dataHost对应的物理主机.其中也设置对应的mysql登陆信息 -->
+	<dataHost name="dh01" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="server1" url="127.0.0.1:3307" user="root" password="123456"/>
+	</dataHost>
+	<dataHost name="dh02" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="server1" url="121.196.184.98:3306" user="root" password="123456"/>
+	</dataHost>
+</mycat:schema>
