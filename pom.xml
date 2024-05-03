@@ -17,6 +17,7 @@
         <module>mycat</module>
         <module>Tracing</module>
         <module>cat</module>
+        <module>kong</module>
     </modules>
 
     <properties>
