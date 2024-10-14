@@ -18,6 +18,7 @@
         <module>Tracing</module>
         <module>cat</module>
         <module>kong</module>
+        <module>nio</module>
     </modules>
 
     <properties>
